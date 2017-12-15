@@ -24,7 +24,58 @@ describe('registration page', () => {
         }
     });
 
-    it('empty first and last name fields show error message', () => {
+    it('empty first and/or last name fields show error message', () => {
+        RegistrationPage.fillForm();
+        
+        RegistrationPage.clearFirstName();
+        RegistrationPage.submitForm();
+        expect(RegistrationPage.getNuberOfErrors()).to.be.eql(1);
+        RegistrationPage.fillFirstName();
 
+        RegistrationPage.clearLastName();
+        RegistrationPage.submitForm();
+        expect(RegistrationPage.getNuberOfErrors()).to.be.eql(1);
+        RegistrationPage.clearFirstName();
+        expect(RegistrationPage.getNuberOfErrors()).to.be.eql(1);
+        RegistrationPage.submitForm();
+        expect(RegistrationPage.getNuberOfErrors()).to.be.eql(1);
+    });
+
+    it('after submitting form thank you page is displayed', () => {
+        RegistrationPage.fillForm();
+        RegistrationPage.submitForm();
+        expect(RegistrationPage.getThankYouMessage()).to.contain('Thank');
+    });
+
+    it('seven fields are required to fill', () => {
+        RegistrationPage.submitForm();
+        expect(RegistrationPage.getNuberOfErrors()).to.be.eql(7);
+    });
+
+    it('when email is not filled, error is displayed', () => {
+        RegistrationPage.submitForm();
+        const empty = RegistrationPage.getNuberOfErrors();
+
+        RegistrationPage.fillEmail();
+        RegistrationPage.submitForm();
+        expect(empty, 'empty email field doent add error message').to.be.eql(RegistrationPage.getNuberOfErrors() + 1);       
+    });
+
+    it('when phone is not filled, error is displayed', () => {
+        RegistrationPage.submitForm();
+        const empty = RegistrationPage.getNuberOfErrors();
+
+        RegistrationPage.fillPhone();
+        RegistrationPage.submitForm();
+        expect(empty, 'empty phone field doent add error message').to.be.eql(RegistrationPage.getNuberOfErrors() + 1);       
+    });
+
+    it('when username is not filled, error is displayed', () => {
+        RegistrationPage.submitForm();
+        const empty = RegistrationPage.getNuberOfErrors();
+
+        RegistrationPage.fillUsername();
+        RegistrationPage.submitForm();
+        expect(empty, 'empty username field doent add error message').to.be.eql(RegistrationPage.getNuberOfErrors() + 1);       
     });
 });
