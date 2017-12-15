@@ -49,6 +49,11 @@ class Registration {
     fillForm() {
 
     }
+
+    submitForm() {
+        this.submit.click();
+        return new ThankYou();
+    }
 }
 
 export default new Registration();

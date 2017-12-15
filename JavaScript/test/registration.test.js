@@ -24,4 +24,7 @@ describe('registration page', () => {
         }
     });
 
+    it('empty first and last name fields show error message', () => {
+
+    });
 });

@@ -1,0 +1,15 @@
+Vytvor testovaci scenare pro overeni funkcnosti registracniho formulare na adrese http://demoqa.com/registration/. 
+- over, ze pri spravnem vyplneni vsech formularovych poli a odeslani je uzivatel informovan o uspesne registraci
+- over, ze pri nevyplneni poli First Name a Last Name je zobrazena validacni hlaska
+- (volitelne) over, ze pri nevyplneni libovolneho povinneho pole je zobrazena validacni hlaska
+D over, ze je uzivatel informovan o sile hesla, ktere zada
+- navrhni, jake dalsi scenare by bylo vhodne otestovat (neni nutne je implementovat)
+
+Pozadavky:
+- pouziti frameworku Selenium
+- testy napis v libovolnem jazyce
+- testy musi byt opakovatelne
+
+Ocekavany vystup:
+- zdrojove kody
+- popsany postup, jak testy spustit
