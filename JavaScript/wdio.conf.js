@@ -79,7 +79,7 @@ exports.config = {
     // with `/`, the base url gets prepended, not including the path portion of your baseUrl.
     // If your `url` parameter starts without a scheme or `/` (like `some/path`), the base url
     // gets prepended directly.
-    baseUrl: 'http://demoqa.com/registration',
+    baseUrl: 'http://demoqa.com',
     //
     // Default timeout for all waitFor* commands.
     waitforTimeout: 10000,
@@ -133,7 +133,7 @@ exports.config = {
     // See the full list at http://mochajs.org/
     mochaOpts: {
         ui: 'bdd',
-        timeout: 99999999,
+        timeout: 1000000,
         compilers: ['js:babel-register']
     },
     //
