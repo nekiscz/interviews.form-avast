@@ -14,7 +14,7 @@ describe('registration page', () => {
         const passwords = ['123', '1asd45fgh6', 'as369d741lok', 'Mas#159oLp*']
 
         for (let index = 0; index < passwords.length; index++) {
-            RegistrationPage.password.setValue(passwords[index])
+            RegistrationPage.fillPassword(passwords[index])
 
             const value = browser.waitUntil(() => {
                 return RegistrationPage.comparePasswordStrength(index + 1)
@@ -24,7 +24,7 @@ describe('registration page', () => {
         }
     });
 
-    it.only('empty first and/or last name fields show error message', () => {
+    it('empty first and/or last name fields show error message', () => {
         RegistrationPage.fillForm();
         
         RegistrationPage.clearFirstName();

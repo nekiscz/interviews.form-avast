@@ -113,6 +113,14 @@ class Registration extends Base {
     }
 
     /**
+     * fills password and confirm password fields
+     */
+    fillPassword(pass) {
+        this.password.setValue(pass);
+        this.confirmPassword.setValue(pass);
+    }
+
+    /**
      * clears last name field
      */
     clearLastName() {
