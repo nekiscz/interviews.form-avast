@@ -24,32 +24,32 @@ describe('registration page', () => {
         }
     });
 
-    it('empty first and/or last name fields show error message', () => {
+    it.only('empty first and/or last name fields show error message', () => {
         RegistrationPage.fillForm();
         
         RegistrationPage.clearFirstName();
         RegistrationPage.submitForm();
-        expect(RegistrationPage.getNuberOfErrors()).to.be.eql(1);
+        expect(RegistrationPage.getNuberOfErrors(), 'no error message shown when first name is empty').to.be.eql(1);
         RegistrationPage.fillFirstName();
 
         RegistrationPage.clearLastName();
         RegistrationPage.submitForm();
-        expect(RegistrationPage.getNuberOfErrors()).to.be.eql(1);
+        expect(RegistrationPage.getNuberOfErrors(), 'no error message shown when last name is empty').to.be.eql(1);
         RegistrationPage.clearFirstName();
-        expect(RegistrationPage.getNuberOfErrors()).to.be.eql(1);
+        expect(RegistrationPage.getNuberOfErrors(), 'no error message shown after clearing both name fields').to.be.eql(1);
         RegistrationPage.submitForm();
-        expect(RegistrationPage.getNuberOfErrors()).to.be.eql(1);
+        expect(RegistrationPage.getNuberOfErrors(), 'no error message shown when both names are empty').to.be.eql(1);
     });
 
     it('after submitting form thank you page is displayed', () => {
         RegistrationPage.fillForm();
         RegistrationPage.submitForm();
-        expect(RegistrationPage.getThankYouMessage()).to.contain('Thank');
+        expect(RegistrationPage.getThankYouMessage(),'thank you message had incorrect text').to.contain('Thank');
     });
 
     it('seven fields are required to fill', () => {
         RegistrationPage.submitForm();
-        expect(RegistrationPage.getNuberOfErrors()).to.be.eql(7);
+        expect(RegistrationPage.getNuberOfErrors(), 'seven error messages was expected on page').to.be.eql(7);
     });
 
     it('when email is not filled, error is displayed', () => {

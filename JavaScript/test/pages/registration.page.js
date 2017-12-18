@@ -1,4 +1,5 @@
 import Base from './base.page';
+import path from 'path';
 
 class Registration extends Base {
     // page elements
@@ -63,9 +64,7 @@ class Registration extends Base {
         this.fillPhone();
         this.fillUsername();
         this.fillEmail();
-        // TODO: unknown error: path is not canonical: G:\p\interviews.form-avast\JavaScript\test\pages\..\testfiles\profile-image.png
-        // after click it opens correct file 
-        // this.picture.addValue(__dirname + '\\..\\testfiles\\profile-image.png');
+        this.picture.addValue(path.join(__dirname, "..", "testfiles", "profile-image.png"));
         this.aboutYourself.setValue(this.loremipsum);
         this.password.setValue('asd123456');
         this.confirmPassword.setValue('asd123456');
