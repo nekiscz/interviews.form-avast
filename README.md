@@ -11,7 +11,7 @@ This repo includes JavaScript and C# solutions for Avast interview test.
 ### How to run
 As prerequisites you need to have [node.js](https://nodejs.org/en/download/) installed on computer.
 1. clone this repo
-2. navigate to `JavaScript` subfolder in comand line
+2. navigate to `JavaScript` subfolder in command line
 3. run `npm install`
 4. run `npm test`
 
@@ -37,7 +37,7 @@ or
 These are bugs according to me, but it is really hard to tell without any documentation. Also these are only ones I found during writing tests.
 
 1. unrealistic date can be set in date picker (aka 31. 2. 2000)
-2. when first name is not filled and form is submited, no error message is displayed (that is why my automation test are failing)
+2. when first name is not filled and form is submitted, no error message is displayed (that is why my automation test are failing)
 3. password strength indicator is flaky at best, sometimes when I fill Week password, indicator shows Very week and changes after some time
 
 ## Possible test scenarios
