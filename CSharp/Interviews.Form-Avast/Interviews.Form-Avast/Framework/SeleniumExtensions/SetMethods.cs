@@ -279,7 +279,7 @@ namespace Interviews.Form_Avast
         /// <param name="relativePath">Relative path of file</param>
         public static void EnterFile(this IWebElement element, string relativePath)
         {
-            var file = Path.GetFullPath(relativePath);
+            var file = Path.Combine(TestEnvironment.TestPath, relativePath);
             element.SendKeys(file);
         }
 

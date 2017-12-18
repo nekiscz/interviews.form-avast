@@ -7,6 +7,30 @@ namespace Interviews.Form_Avast
     public static class WaitMethods
     {
         /// <summary>
+        /// Stops program for some amount of time
+        /// </summary>
+        /// <param name="element">Any HTML element</param>
+        /// <param name="milliseconds">How long should program wait</param>
+        /// <returns>Given element</returns>
+        public static IWebElement PlainWait(this IWebElement element, int milliseconds)
+        {
+            System.Threading.Thread.Sleep(milliseconds);
+            return element;
+        }
+
+        /// <summary>
+        /// Stops program for some amount of time
+        /// </summary>
+        /// <param name="element">Any HTML element</param>
+        /// <param name="milliseconds">How long should program wait</param>
+        /// <returns>Given element</returns>
+        public static IList<IWebElement> PlainWait(this IList<IWebElement> element, int milliseconds)
+        {
+            System.Threading.Thread.Sleep(milliseconds);
+            return element;
+        }
+
+        /// <summary>
         /// Waits till the element is clickable
         /// </summary>
         /// <param name="element">Any HTML element</param>

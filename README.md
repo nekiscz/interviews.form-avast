@@ -2,6 +2,7 @@
 This repo includes JavaScript (so far) solution for Avast interview test. 
 
 ## JavaScript
+- page object
 - webdriver.io
 - mocha and chai
 - ES6 with babel compilation
@@ -13,6 +14,17 @@ As prerequisites you need to have [node.js](https://nodejs.org/en/download/) ins
 2. navigate to `JavaScript` subfolder in comand line
 3. run `npm install`
 4. run `npm test`
+
+## C#
+- page object
+- page factory
+- NUnit
+- NUnitOrange
+
+### How to run
+1. clone this repo
+2. build project and install packages
+3. run `runall.bat` in `interviews.form-avast\CSharp\Interviews.Form-Avast\Interviews.Form-Avast\bin\{buildsettings}\Framework\Console`
 
 ## Possible test scenarios
 1. message for not matching passwords

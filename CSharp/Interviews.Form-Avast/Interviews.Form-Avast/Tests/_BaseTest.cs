@@ -10,6 +10,7 @@ namespace Interviews.Form_Avast.Tests
         {
 			Log.StartOfFixture();
             Browser.CreateDriver();
+            Browser.Maximize();
 			TestEnvironment.SelectEnvironment(TestEnvironment.Environment.Stage);
         }
 
