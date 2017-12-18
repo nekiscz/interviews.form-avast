@@ -23,8 +23,15 @@ As prerequisites you need to have [node.js](https://nodejs.org/en/download/) ins
 
 ### How to run
 1. clone this repo
-2. build project and install packages
+2. build C# project and install packages
 3. run `runall.bat` in `interviews.form-avast\CSharp\Interviews.Form-Avast\Interviews.Form-Avast\bin\{buildsettings}\Framework\Console`
+
+or 
+
+1. clone this repo
+2. build C# project in Visual Studio
+3. go to Test/Windows/Test Explorer in Visual Studio
+4. in Test Explorer click on Run all
 
 ## Bugs
 These are bugs according to me, but it is really hard to tell without any documentation. Also these are only ones I found during writing tests.
